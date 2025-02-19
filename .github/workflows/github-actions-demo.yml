@@ -24,7 +24,7 @@ jobs:
         shell: python
         run: |
           import os
-          os.listdir(${{ github.workspace }})
+          print(os.listdir()) >> $GITHUB_STEP_SUMMARY
       - name: greeting
         run: echo "## Hi Everyone" >> $GITHUB_STEP_SUMMARY
       - run: echo "🍏 This job's status is ${{ job.status }}."
