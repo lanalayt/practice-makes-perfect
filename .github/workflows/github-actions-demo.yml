@@ -13,11 +13,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest      
     steps:
-      #just logging stuff for fun
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-
       #Check out code 
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -30,10 +25,11 @@ jobs:
         with:
           python-version: '3.9' 
 
-      #Execute Python Script
-      - name: Execute Python Script
-        run: python my_script.py >> $GITHUB_STEP_SUMMARY
+      #Write greeting on step summary page
+      - name: Greeting
+        run: echo "## Here are the word counts for each markdown file:" >> $GITHUB_STEP_SUMMARY
 
-      - name: greeting
-        run: echo "## Hi Everyone" >> $GITHUB_STEP_SUMMARY
+      #Execute Python script
+      - name: Execute Python Script
+        run: python hello_world.py >> $GITHUB_STEP_SUMMARY
       - run: echo "🍏 This job's status is ${{ job.status }}."
