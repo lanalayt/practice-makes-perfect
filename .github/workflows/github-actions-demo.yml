@@ -32,7 +32,7 @@ jobs:
 
       #Execute Python Script
       - name: Execute Python Script
-        run: python scripts/my_script.py >> $GITHUB_STEP_SUMMARY
+        run: python my_script.py >> $GITHUB_STEP_SUMMARY
 
       - name: greeting
         run: echo "## Hi Everyone" >> $GITHUB_STEP_SUMMARY
