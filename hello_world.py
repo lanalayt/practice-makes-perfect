@@ -16,3 +16,6 @@ def count_words_in_md_files():
                         
                     # Append the result to the step summary
                     summary.write(f"File: {file_path} has {word_count} words\n")
+
+if __name__ == "__main__":
+    count_words_in_md_files()
