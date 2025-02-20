@@ -3,10 +3,9 @@ import os
 def count_words_in_md_files():
     # Open the GitHub Actions step summary file
     with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
-        summary.write("## Word Counts in Markdown Files\n")
 
         # Walk through the repository directory to find all .md files
-        for root, dirs, files in os.walk("."):
+        for root, dirs, files in os.walk("./courses"):
             for file in files:
                 if file.endswith(".md"):
                     file_path = os.path.join(root, file)
