@@ -3,11 +3,11 @@ name: Markdown Word Counter
 on: 
   push:
     branches:
-      - 'feature/working_branch'
+      - 'working_branch'
   pull_request:
     branches:
       - main
-      - 'feature/working_branch'
+      - 'working_branch'
 
 jobs:
   Count-Words:
