@@ -3,11 +3,11 @@ name: Markdown Word Counter
 on: 
   push:
     branches:
-      - 'feature/adding-a-md-word-counter-github-action'
+      - 'feature/working_branch'
   pull_request:
     branches:
       - main
-      - 'feature/adding-a-md-word-counter-github-action'
+      - 'feature/working_branch'
 
 jobs:
   Count-Words:
